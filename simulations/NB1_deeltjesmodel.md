@@ -11,7 +11,7 @@ De basis van een goede computer simulatie ligt, net als bij het oplossen van een
 ```{exercise}
 Als startopdracht modelleren we twee fietsers. Doorloop de bovenstaande drie stappen. 
 ```
-
+bob
 
 
 
