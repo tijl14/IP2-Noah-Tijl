@@ -6,10 +6,10 @@ project:
   # description:
   # keywords: []
   authors: 
-    - name: Freek Pols
-    - name: Roel Smit
+    - name: Noah Degenkamp
+    - name: Tijl Haster
 
-  github: https://github.com/Contemporary-Physicslab/thermolab
+  github: https://github.com/tijl14/IP2-Noah-Tijl
   plugins:
     - https://github.com/jupyter-book/myst-plugins/releases/download/page-last-updatedv1.1/page-last-updated.mjs
   toc:
