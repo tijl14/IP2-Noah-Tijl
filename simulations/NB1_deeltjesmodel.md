@@ -36,7 +36,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Beginwaarden
-dt = 0.25                  #s
+dt = 0.1                     #s
 t_e = 10                   #s
 N = int(t_e/dt)+1
 t = np.arange(0,t_e+dt,dt) #s
@@ -59,13 +59,11 @@ for i in range(0,N-1):
 
 # Plotten van de gegevens.    
 plt.figure()
-
 plt.xlabel('$t$(s)')
 plt.ylabel('$x$(m)')
-
 plt.plot(t,x_1,'r.', markersize=1, label='fietser 1')
 plt.plot(t,x_2,'b.', markersize=1, label='fietser 2')
-
+plt.legend()
 plt.show()
 
 
@@ -135,7 +133,6 @@ Nu we een object hebben, laten we eens kijken of we de eigenschappen van het obj
 ```python
 print("Massa van het deeltje " + str(this_particle.m) + " kg")
 print("Huidige positie is " + str(this_particle.r))
-
 # oproepen van de functie 'update_position' met dt = 1.0 seconde
 this_particle.update_position(1.0)
 print("Nieuwe positie " + str(this_particle.r))
@@ -229,7 +226,20 @@ En als je wilt gaan voor een uitdaging:
 ```
 
 ```python
-### YOUR CODE HERE ###
+deeltjes_arr = []
+nieuw_arr = []
+
+for x in range(10):
+    deeltjes_arr.append(ParticleClass(m=1.0, v=[np.random.randint(-5,6), 0], r=[x, 0.0],R=1.0))
+for y in range(10):
+    nieuw_arr.append(
+
+plt.figure()
+for deeltje in deeltjes_arr:
+    plt.plot(deeltje.r[0],deeltje.r[1],'k.')
+for nieuw_deeltje in deeltjes_arr:
+    plt.plot(nieuw_deeltje.r[
+plt.show()
 ```
 
 Onze simulaties worden snel “zwaar”. Er moeten veel berekeningen gedaan worden en dat kost nu eenmaal tijd. Nu is het wel zo dat sommige berekeningen meer tijd kosten dan anderen. Om te kijken of een stukje code geoptimaliseerd kan worden, moeten we een timer maken. Dat kan met onderstaande code:
